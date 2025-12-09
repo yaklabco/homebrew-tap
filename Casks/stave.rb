@@ -13,23 +13,23 @@ cask "stave" do
 
   on_macos do
     on_intel do
-      url "https://github.com/yaklabco/stave/releases/download/#{version}/stave_#{version}_darwin_amd64.tar.gz"
-      sha256 "206308d9a411bb1a07d1eca7e7e624d1588e9fef739454f9bd5d94e317bac23e"
+      url "https://github.com/yaklabco/stave/releases/download/v#{version}/stave_#{version}_darwin_amd64.tar.gz"
+      sha256 "c029c99935e985366ece6bffb78ff98d53d5ace3be8dc2ef7495a05c6cfea3fd"
     end
     on_arm do
-      url "https://github.com/yaklabco/stave/releases/download/#{version}/stave_#{version}_darwin_arm64.tar.gz"
-      sha256 "505d8ceed4ead40ea5771941d4f314ee72cb49a70b2ff14cd17de8e1e0910ce2"
+      url "https://github.com/yaklabco/stave/releases/download/v#{version}/stave_#{version}_darwin_arm64.tar.gz"
+      sha256 "18abc638ebb7ec8e39cd7573977adbc4a417390df98edc60e013af2071bce3ef"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/yaklabco/stave/releases/download/#{version}/stave_#{version}_linux_amd64.tar.gz"
-      sha256 "7d8e35c32a7fb49717cf04c5176b871f9da58f83db27553c67757dd4e231dc5b"
+      url "https://github.com/yaklabco/stave/releases/download/v#{version}/stave_#{version}_linux_amd64.tar.gz"
+      sha256 "99772221c48034f7a73fecd2beb207df445709c2563b10483864fae3afc7b8fc"
     end
     on_arm do
-      url "https://github.com/yaklabco/stave/releases/download/#{version}/stave_#{version}_linux_arm64.tar.gz"
-      sha256 "91ac453cc002766c4099cd13ddce54ed2488760453e7b0122ecde64e69b278a3"
+      url "https://github.com/yaklabco/stave/releases/download/v#{version}/stave_#{version}_linux_arm64.tar.gz"
+      sha256 "b757a4f1f57496f37df52ab9aa75e5fb9e09597eca913f9935ca873d2b8b1b2e"
     end
   end
 
