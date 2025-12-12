@@ -3,7 +3,7 @@ cask "stave" do
   name "stave"
   desc "Make(file) replacement that is pure Go based (a fork of `makefile/mage`)."
   homepage "https://github.com/yaklabco/stave"
-  version "0.2.7"
+  version "0.2.8"
 
   livecheck do
     skip "Auto-generated on release."
@@ -14,22 +14,22 @@ cask "stave" do
   on_macos do
     on_intel do
       url "https://github.com/yaklabco/stave/releases/download/v#{version}/stave_#{version}_darwin_amd64.tar.gz"
-      sha256 "0f093072eb9231fc60a4caa8fa7d1c42495acb30d0c59a4b29e9af0c96ee8594"
+      sha256 "8d0653e780063755bc156eea8078de6fc6be5d4f26323bfc32a350e412794ccd"
     end
     on_arm do
       url "https://github.com/yaklabco/stave/releases/download/v#{version}/stave_#{version}_darwin_arm64.tar.gz"
-      sha256 "3099122e0b9ee42c3e3f97739dfd0b590069675c22bf7cedbb95ef96eac58871"
+      sha256 "e1ea508f3e818f900995e7a9ed1c365f0d2e89d32a8f8f6155460704b3398995"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/yaklabco/stave/releases/download/v#{version}/stave_#{version}_linux_amd64.tar.gz"
-      sha256 "e2df559a33578b61db8e1e9b8dc5a35a477daf7ac8f38e64f419088e363c792a"
+      sha256 "cdc90e0cb8a9014fe7cf87cf23ca62ed1dac3251663d151d60bcd590f059c955"
     end
     on_arm do
       url "https://github.com/yaklabco/stave/releases/download/v#{version}/stave_#{version}_linux_arm64.tar.gz"
-      sha256 "3718fdcac726fa229d7aebc3bdfdedba4008abe2a83142789865566159d83405"
+      sha256 "cf4ca07eb5bafde2cbc88b6b17961650d901b054ec520e2753e5c614be0ee626"
     end
   end
 
