@@ -5,65 +5,75 @@
 class Stave < Formula
   desc "Make(file) replacement that is pure Go based (a fork of `makefile/mage`)."
   homepage "https://github.com/yaklabco/stave"
-  version "0.5.1"
-  license "Apache 2.0"
+  version "0.5.2"
+  license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/yaklabco/stave/releases/download/v0.5.1/stave_0.5.1_darwin_amd64.tar.gz"
-      sha256 "cbdeec3e0d804bcc64f98d042f39817bfd6243e8c9e0593c133dce4e25fd65b5"
+      url "https://github.com/yaklabco/stave/releases/download/v0.5.2/stave_0.5.2_darwin_amd64.tar.gz"
+      sha256 "5ac6365c9b315cef2bc2e4be9b6c3bf6c343a4ddd3166b8c93b2d6177c978094"
 
       def install
         bin.install "stave"
-        bash_completion.install "stave.bash" => "stave"
-        zsh_completion.install "stave.zsh" => "_stave"
-        fish_completion.install "stave.fish"
+        bash_completion.install "completions/stave.bash" => "stave"
+        zsh_completion.install "completions/stave.zsh" => "_stave"
+        fish_completion.install "completions/stave.fish"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/yaklabco/stave/releases/download/v0.5.1/stave_0.5.1_darwin_arm64.tar.gz"
-      sha256 "9da79cb8a46c514e6a1a30afef77cb3a0106e5cb272c43e1dc862e1d196617ec"
+      url "https://github.com/yaklabco/stave/releases/download/v0.5.2/stave_0.5.2_darwin_arm64.tar.gz"
+      sha256 "c31a0395c8b31725d577608e8b3b1ea9e02c733dabb9fb217c5e651c67c28805"
 
       def install
         bin.install "stave"
-        bash_completion.install "stave.bash" => "stave"
-        zsh_completion.install "stave.zsh" => "_stave"
-        fish_completion.install "stave.fish"
+        bash_completion.install "completions/stave.bash" => "stave"
+        zsh_completion.install "completions/stave.zsh" => "_stave"
+        fish_completion.install "completions/stave.fish"
       end
     end
   end
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/yaklabco/stave/releases/download/v0.5.1/stave_0.5.1_linux_amd64.tar.gz"
-      sha256 "8b726a22a66337c72547b8904b159bbb7377b457188782b0d95c070ac7bb9b31"
+      url "https://github.com/yaklabco/stave/releases/download/v0.5.2/stave_0.5.2_linux_amd64.tar.gz"
+      sha256 "49ba6bc54a2e1975018a7730d80b71ef4a6ea48dc8defe4a85f34e33b4e7a67d"
       def install
         bin.install "stave"
-        bash_completion.install "stave.bash" => "stave"
-        zsh_completion.install "stave.zsh" => "_stave"
-        fish_completion.install "stave.fish"
+        bash_completion.install "completions/stave.bash" => "stave"
+        zsh_completion.install "completions/stave.zsh" => "_stave"
+        fish_completion.install "completions/stave.fish"
       end
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/yaklabco/stave/releases/download/v0.5.1/stave_0.5.1_linux_arm.tar.gz"
-      sha256 "209bdd0435ef40ca1265535f34b3305e2acd4bce56d3c91dde8f9353576c6530"
+      url "https://github.com/yaklabco/stave/releases/download/v0.5.2/stave_0.5.2_linux_arm.tar.gz"
+      sha256 "ce1c68f2062bea8d07cc7f2d3a70930e4001b8a021b4cc07acc7e7ad3f705a30"
       def install
         bin.install "stave"
-        bash_completion.install "stave.bash" => "stave"
-        zsh_completion.install "stave.zsh" => "_stave"
-        fish_completion.install "stave.fish"
+        bash_completion.install "completions/stave.bash" => "stave"
+        zsh_completion.install "completions/stave.zsh" => "_stave"
+        fish_completion.install "completions/stave.fish"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/yaklabco/stave/releases/download/v0.5.1/stave_0.5.1_linux_arm64.tar.gz"
-      sha256 "949b08560ba589c58e3241eeb1c2d52e313106da44948c9204577700a49c9c97"
+      url "https://github.com/yaklabco/stave/releases/download/v0.5.2/stave_0.5.2_linux_arm64.tar.gz"
+      sha256 "fb7259fa58431faaa006cb2875cffbb2d5c48f0a577177cdfdcc9f3faf1da2a0"
       def install
         bin.install "stave"
-        bash_completion.install "stave.bash" => "stave"
-        zsh_completion.install "stave.zsh" => "_stave"
-        fish_completion.install "stave.fish"
+        bash_completion.install "completions/stave.bash" => "stave"
+        zsh_completion.install "completions/stave.zsh" => "_stave"
+        fish_completion.install "completions/stave.fish"
       end
     end
+  end
+
+  def caveats
+    <<~EOS
+      To enable completions, you may need to add the following to your shell profile, and then open a new shell:
+        zsh:
+          autoload -U compinit && compinit
+        bash:
+          [[ -r "$(brew --prefix)/etc/profile.d/bash_completion.sh" ]] && . "$(brew --prefix)/etc/profile.d/bash_completion.sh"
+    EOS
   end
 
   test do
