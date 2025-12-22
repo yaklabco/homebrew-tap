@@ -5,63 +5,63 @@
 class Stave < Formula
   desc "Make(file) replacement that is pure Go based (a fork of `makefile/mage`)."
   homepage "https://github.com/yaklabco/stave"
-  version "0.5.2"
+  version "0.5.3"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/yaklabco/stave/releases/download/v0.5.2/stave_0.5.2_darwin_amd64.tar.gz"
-      sha256 "5ac6365c9b315cef2bc2e4be9b6c3bf6c343a4ddd3166b8c93b2d6177c978094"
+      url "https://github.com/yaklabco/stave/releases/download/v0.5.3/stave_0.5.3_darwin_amd64.tar.gz"
+      sha256 "d65c260f407fa81dc40aafd3ba9eb5beedbc5652bb8890c2bf049b93c5c4c960"
 
       def install
         bin.install "stave"
-        bash_completion.install "completions/stave.bash" => "stave"
-        zsh_completion.install "completions/stave.zsh" => "_stave"
-        fish_completion.install "completions/stave.fish"
+        bash_completion.install ".build_cache/completions/stave.bash" => "stave"
+        zsh_completion.install ".build_cache/completions/stave.zsh" => "_stave"
+        fish_completion.install ".build_cache/completions/stave.fish"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/yaklabco/stave/releases/download/v0.5.2/stave_0.5.2_darwin_arm64.tar.gz"
-      sha256 "c31a0395c8b31725d577608e8b3b1ea9e02c733dabb9fb217c5e651c67c28805"
+      url "https://github.com/yaklabco/stave/releases/download/v0.5.3/stave_0.5.3_darwin_arm64.tar.gz"
+      sha256 "9b0b8bd4162f0667b403a5c0862d9b598db54b2beadfc1f76725fef73a1e0050"
 
       def install
         bin.install "stave"
-        bash_completion.install "completions/stave.bash" => "stave"
-        zsh_completion.install "completions/stave.zsh" => "_stave"
-        fish_completion.install "completions/stave.fish"
+        bash_completion.install ".build_cache/completions/stave.bash" => "stave"
+        zsh_completion.install ".build_cache/completions/stave.zsh" => "_stave"
+        fish_completion.install ".build_cache/completions/stave.fish"
       end
     end
   end
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/yaklabco/stave/releases/download/v0.5.2/stave_0.5.2_linux_amd64.tar.gz"
-      sha256 "49ba6bc54a2e1975018a7730d80b71ef4a6ea48dc8defe4a85f34e33b4e7a67d"
+      url "https://github.com/yaklabco/stave/releases/download/v0.5.3/stave_0.5.3_linux_amd64.tar.gz"
+      sha256 "42bb8c35eb02b90973b57f6ed5c95387031ef28b51665e82888fdc131f52ded1"
       def install
         bin.install "stave"
-        bash_completion.install "completions/stave.bash" => "stave"
-        zsh_completion.install "completions/stave.zsh" => "_stave"
-        fish_completion.install "completions/stave.fish"
+        bash_completion.install ".build_cache/completions/stave.bash" => "stave"
+        zsh_completion.install ".build_cache/completions/stave.zsh" => "_stave"
+        fish_completion.install ".build_cache/completions/stave.fish"
       end
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/yaklabco/stave/releases/download/v0.5.2/stave_0.5.2_linux_arm.tar.gz"
-      sha256 "ce1c68f2062bea8d07cc7f2d3a70930e4001b8a021b4cc07acc7e7ad3f705a30"
+      url "https://github.com/yaklabco/stave/releases/download/v0.5.3/stave_0.5.3_linux_arm.tar.gz"
+      sha256 "a225f4b5495be762f22acc7912d333a5e1b5f9bef37eca7e783c26f59bf513ba"
       def install
         bin.install "stave"
-        bash_completion.install "completions/stave.bash" => "stave"
-        zsh_completion.install "completions/stave.zsh" => "_stave"
-        fish_completion.install "completions/stave.fish"
+        bash_completion.install ".build_cache/completions/stave.bash" => "stave"
+        zsh_completion.install ".build_cache/completions/stave.zsh" => "_stave"
+        fish_completion.install ".build_cache/completions/stave.fish"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/yaklabco/stave/releases/download/v0.5.2/stave_0.5.2_linux_arm64.tar.gz"
-      sha256 "fb7259fa58431faaa006cb2875cffbb2d5c48f0a577177cdfdcc9f3faf1da2a0"
+      url "https://github.com/yaklabco/stave/releases/download/v0.5.3/stave_0.5.3_linux_arm64.tar.gz"
+      sha256 "73ffef084f1d62e3a3b1b286fdcaa53ab9ad4bc22b364d3957a7532ae87ca08b"
       def install
         bin.install "stave"
-        bash_completion.install "completions/stave.bash" => "stave"
-        zsh_completion.install "completions/stave.zsh" => "_stave"
-        fish_completion.install "completions/stave.fish"
+        bash_completion.install ".build_cache/completions/stave.bash" => "stave"
+        zsh_completion.install ".build_cache/completions/stave.zsh" => "_stave"
+        fish_completion.install ".build_cache/completions/stave.fish"
       end
     end
   end
