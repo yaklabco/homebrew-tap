@@ -5,13 +5,13 @@
 class Stave < Formula
   desc "Make(file) replacement that is pure Go based (a fork of `makefile/mage`)."
   homepage "https://github.com/yaklabco/stave"
-  version "0.9.4"
+  version "0.9.5"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/yaklabco/stave/releases/download/v0.9.4/stave_0.9.4_darwin_amd64.tar.gz"
-      sha256 "deae9384761de3dbc4482d5e4b1fd14c6a4a6cd92468bf6f3dadd4b5c2185693"
+      url "https://github.com/yaklabco/stave/releases/download/v0.9.5/stave_0.9.5_darwin_amd64.tar.gz"
+      sha256 "b5eecb2ca9a2746ac8827583fdd587620b2d8f0179ba4976962c34b2c4d9198e"
 
       def install
         bin.install "stave"
@@ -21,8 +21,8 @@ class Stave < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/yaklabco/stave/releases/download/v0.9.4/stave_0.9.4_darwin_arm64.tar.gz"
-      sha256 "0054d9a32e3f5959f975dd643e51c20493149da429c67f35468df7f4e49dba9c"
+      url "https://github.com/yaklabco/stave/releases/download/v0.9.5/stave_0.9.5_darwin_arm64.tar.gz"
+      sha256 "deaf051c77666a7f723dcdc75af1e6083ee4eeec13f08f4fcff7174cc79095fc"
 
       def install
         bin.install "stave"
@@ -35,8 +35,8 @@ class Stave < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/yaklabco/stave/releases/download/v0.9.4/stave_0.9.4_linux_amd64.tar.gz"
-      sha256 "2f18d46b80389fe661e9b2b983ea0b10486a5f20c45dddecf1c4c63bb2b7f2b1"
+      url "https://github.com/yaklabco/stave/releases/download/v0.9.5/stave_0.9.5_linux_amd64.tar.gz"
+      sha256 "f592a4bc82004a882c4509bf3b6239825477faee8ece43dfc6d0b08553025bfd"
       def install
         bin.install "stave"
         bash_completion.install "completions/stave.bash" => "stave"
@@ -45,8 +45,8 @@ class Stave < Formula
       end
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/yaklabco/stave/releases/download/v0.9.4/stave_0.9.4_linux_arm.tar.gz"
-      sha256 "570d114abdb4d1d5ec85370a3c0424793cdefc39e69070085162f51de273483a"
+      url "https://github.com/yaklabco/stave/releases/download/v0.9.5/stave_0.9.5_linux_arm.tar.gz"
+      sha256 "fcb6276e8ddbbc8db5c9382c2e86661c7d4706274dd91fbea1ce40376b525c27"
       def install
         bin.install "stave"
         bash_completion.install "completions/stave.bash" => "stave"
@@ -55,8 +55,8 @@ class Stave < Formula
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/yaklabco/stave/releases/download/v0.9.4/stave_0.9.4_linux_arm64.tar.gz"
-      sha256 "81fc73d33028bc7e71e36e439001d7da85de15d5e54fbd90c3cddf96d7366480"
+      url "https://github.com/yaklabco/stave/releases/download/v0.9.5/stave_0.9.5_linux_arm64.tar.gz"
+      sha256 "5b98f2b497348017836453ef1ab516e73d91c95bbe6ad98e49a9adeffe857fd5"
       def install
         bin.install "stave"
         bash_completion.install "completions/stave.bash" => "stave"
