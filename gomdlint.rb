@@ -11,7 +11,7 @@ class Gomdlint < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/yaklabco/gomdlint/releases/download/v0.1.1/gomdlint_0.1.1_Darwin_x86_64.tar.gz"
-      sha256 "14c4d5423b8f9e44adae94bccc2cd16821776c8ac11d31de65f879f8f57e4622"
+      sha256 "2cd1b6747ea06af2c62a1b24858b649a115e102df9a4d0b38cd805df343090ea"
 
       def install
         bin.install "gomdlint"
@@ -22,7 +22,7 @@ class Gomdlint < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/yaklabco/gomdlint/releases/download/v0.1.1/gomdlint_0.1.1_Darwin_arm64.tar.gz"
-      sha256 "b298d463fc2b3e8df84bd05efa9043d10883050dcd77b92e255a69b7e768da3f"
+      sha256 "beccc012b4f2ec682c3012182eeada37d46383daddeadc60a5f04c3fa547c22a"
 
       def install
         bin.install "gomdlint"
@@ -36,7 +36,7 @@ class Gomdlint < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/yaklabco/gomdlint/releases/download/v0.1.1/gomdlint_0.1.1_Linux_x86_64.tar.gz"
-      sha256 "799487e26e5a6c80e1fb12daa4342c5fbad1c8dabe1061fb20119e13c4c4532a"
+      sha256 "b4272ad00d9818cf07a8efbe610057d97528bde2c36ea51e747bf59377b69b6f"
       def install
         bin.install "gomdlint"
         bash_completion.install "completions/gomdlint.bash" => "gomdlint"
@@ -46,7 +46,7 @@ class Gomdlint < Formula
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/yaklabco/gomdlint/releases/download/v0.1.1/gomdlint_0.1.1_Linux_arm64.tar.gz"
-      sha256 "eb4bc2cb7c0f403f2dad69598d8560839eac88282e30534b55a2e17fde155744"
+      sha256 "485120db91d0ab75c653fe67a10aa36802e96ce72bc651cda7301a773195c62a"
       def install
         bin.install "gomdlint"
         bash_completion.install "completions/gomdlint.bash" => "gomdlint"
