@@ -5,13 +5,13 @@
 class Gomdlint < Formula
   desc "Fast Markdown linter with autofix support"
   homepage "https://github.com/yaklabco/gomdlint"
-  version "0.1.1"
+  version "0.2.0"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/yaklabco/gomdlint/releases/download/v0.1.1/gomdlint_0.1.1_Darwin_x86_64.tar.gz"
-      sha256 "2cd1b6747ea06af2c62a1b24858b649a115e102df9a4d0b38cd805df343090ea"
+      url "https://github.com/yaklabco/gomdlint/releases/download/v0.2.0/gomdlint_0.2.0_darwin_amd64.tar.gz"
+      sha256 "fc3cdd5cb27d18642fc967a19c2159541d708780b9a20b65e5052165d87ebb8c"
 
       def install
         bin.install "gomdlint"
@@ -21,8 +21,8 @@ class Gomdlint < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/yaklabco/gomdlint/releases/download/v0.1.1/gomdlint_0.1.1_Darwin_arm64.tar.gz"
-      sha256 "beccc012b4f2ec682c3012182eeada37d46383daddeadc60a5f04c3fa547c22a"
+      url "https://github.com/yaklabco/gomdlint/releases/download/v0.2.0/gomdlint_0.2.0_darwin_arm64.tar.gz"
+      sha256 "afff80d90511a39d0385b1bae2775d6e671e376e50265bcbb643bfa9da0f391f"
 
       def install
         bin.install "gomdlint"
@@ -35,8 +35,8 @@ class Gomdlint < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/yaklabco/gomdlint/releases/download/v0.1.1/gomdlint_0.1.1_Linux_x86_64.tar.gz"
-      sha256 "b4272ad00d9818cf07a8efbe610057d97528bde2c36ea51e747bf59377b69b6f"
+      url "https://github.com/yaklabco/gomdlint/releases/download/v0.2.0/gomdlint_0.2.0_linux_amd64.tar.gz"
+      sha256 "27b27d2f1972359cc10f9eed73dc88f47b6a648a0b7c4ef6e178acd3b80f36cc"
       def install
         bin.install "gomdlint"
         bash_completion.install "completions/gomdlint.bash" => "gomdlint"
@@ -45,8 +45,8 @@ class Gomdlint < Formula
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/yaklabco/gomdlint/releases/download/v0.1.1/gomdlint_0.1.1_Linux_arm64.tar.gz"
-      sha256 "485120db91d0ab75c653fe67a10aa36802e96ce72bc651cda7301a773195c62a"
+      url "https://github.com/yaklabco/gomdlint/releases/download/v0.2.0/gomdlint_0.2.0_linux_arm64.tar.gz"
+      sha256 "de97a1e968ae888c55d497e9f20b868aa99ae10b40613bff74982c2c2175e906"
       def install
         bin.install "gomdlint"
         bash_completion.install "completions/gomdlint.bash" => "gomdlint"
