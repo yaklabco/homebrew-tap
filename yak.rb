@@ -6,13 +6,13 @@ require_relative "./custom_download_strategy"
 class Yak < Formula
   desc "CLI for the yaklab control plane — manage members, invitations, services, and audit logs."
   homepage "https://github.com/yaklabco/yaklab-controlplane"
-  version "0.2.0"
+  version "0.3.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/yaklabco/yaklab-controlplane/releases/download/v0.2.0/yak_0.2.0_darwin_amd64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
-      sha256 "e9f876affdda1ec672591f893729681307e44b57f6703ba7a66c8cafdf4c18c0"
+      url "https://github.com/yaklabco/yaklab-controlplane/releases/download/v0.3.0/yak_0.3.0_darwin_amd64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
+      sha256 "38958f184d807152a12d340d5043efc806331d4c7b2bb92857d41f8e5c793465"
 
       def install
         bin.install "yak"
@@ -22,8 +22,8 @@ class Yak < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/yaklabco/yaklab-controlplane/releases/download/v0.2.0/yak_0.2.0_darwin_arm64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
-      sha256 "133d49f09395c740829ac7448ed2fe4b983f9c6e6a2405a8e4f24b4683fdbcbd"
+      url "https://github.com/yaklabco/yaklab-controlplane/releases/download/v0.3.0/yak_0.3.0_darwin_arm64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
+      sha256 "f73a04d1bc51df53c128716752107d17dc0e5558e6b4f4d872874a51ddb3420c"
 
       def install
         bin.install "yak"
@@ -36,8 +36,8 @@ class Yak < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/yaklabco/yaklab-controlplane/releases/download/v0.2.0/yak_0.2.0_linux_amd64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
-      sha256 "e23bd1edd9cf8d0e5ce67768b9579294217d276bfda0a5d830603e686bea6a82"
+      url "https://github.com/yaklabco/yaklab-controlplane/releases/download/v0.3.0/yak_0.3.0_linux_amd64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
+      sha256 "b4858fc13ee8dc31662bd0cca21456a58426e134da10124ed66ebcb1292e2aa7"
       def install
         bin.install "yak"
         bash_completion.install "completions/yak.bash" => "yak"
@@ -46,8 +46,8 @@ class Yak < Formula
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/yaklabco/yaklab-controlplane/releases/download/v0.2.0/yak_0.2.0_linux_arm64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
-      sha256 "2ab008a634de79dada1196f4135e191d2c9988b98bddfbc9e0b1f3be28fa1cca"
+      url "https://github.com/yaklabco/yaklab-controlplane/releases/download/v0.3.0/yak_0.3.0_linux_arm64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
+      sha256 "532e71f8ad80b63834b78aca1637f77da6eed1107b44d66161d476b4af09382f"
       def install
         bin.install "yak"
         bash_completion.install "completions/yak.bash" => "yak"
