@@ -6,9 +6,9 @@
 class CamctlCli < Formula
   desc "Control UVC cameras from the shell: zoom, pan, tilt, exposure and more"
   homepage "https://github.com/jamesainslie/camctl"
-  url "https://github.com/jamesainslie/camctl/releases/download/v0.1.2/camctl-cli-0.1.2-macos-arm64.tar.gz"
-  version "0.1.2"
-  sha256 "e3ffd45ba72b6123e8c150ff4e65094ced775cb2e676b1a1b86c3532906062d0"
+  url "https://github.com/jamesainslie/camctl/releases/download/v0.1.3/camctl-cli-0.1.3-macos-arm64.tar.gz"
+  version "0.1.3"
+  sha256 "82fa8fc3c9481922611bc7970113ca4c6822bb92f55771b4236c68d5808ec65d"
   license "MIT"
 
   depends_on arch: :arm64
